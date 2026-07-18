@@ -3,8 +3,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const Add = () => {
-  
-const backendUrl = "https://mern-e-commerce-project-yowr.onrender.com";
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [image1, setImage1] = useState(false);
   const [image2, setImage2] = useState(false);
   const [image3, setImage3] = useState(false);
