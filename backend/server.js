@@ -13,17 +13,15 @@ import orderRouter from "./routes/orderRoute.js";
 const app = express();
 const port = process.env.PORT || 4000;
 
-// Database
+// Connect Services
 connectDB();
-
-// Cloudinary
 connectCloudinary();
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
 
-// API Endpoints
+// Routes
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);

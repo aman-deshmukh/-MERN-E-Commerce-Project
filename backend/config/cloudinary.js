@@ -1,9 +1,4 @@
 import { v2 as cloudinary } from "cloudinary";
-import connectCloudinary from "./config/cloudinary.js";
-
-// Connect Database
-connectDB();
-connectCloudinary();
 
 const connectCloudinary = async () => {
   cloudinary.config({
@@ -11,6 +6,8 @@ const connectCloudinary = async () => {
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_SECRET_KEY,
   });
+
+  console.log("Cloudinary Connected");
 };
 
 export default connectCloudinary;
