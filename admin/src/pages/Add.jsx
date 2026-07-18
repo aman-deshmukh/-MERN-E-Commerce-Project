@@ -81,6 +81,9 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
   }
 };
 
+
+console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
+
   return (
    <form
   onSubmit={onSubmitHandler}
